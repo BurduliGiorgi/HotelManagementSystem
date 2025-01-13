@@ -1,0 +1,53 @@
+﻿using HotelManagementSystem.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using System.Net;
+
+namespace HotelManagementSystem.Controllers
+{
+    public class HotelController : Controller
+    {
+        private readonly ILogger<HotelController> _logger;
+        private readonly IConfiguration _configuration;
+        private readonly SqlConnection _connection;
+        public HotelController(ILogger<HotelController> logger, IConfiguration configuration)
+        {
+            _logger = logger;
+            _configuration = configuration;
+            _connection = new SqlConnection(_configuration.GetConnectionString("HotelManagementDB"));
+        }
+        public IActionResult Index()
+        {
+           List<Hotel> hotels = new List<Hotel>();
+            using (var connection = _connection)
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM HotelManagementDB.dbo.Hotels", connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read()) 
+                {
+                    hotels.Add(new Hotel
+                    {
+                        
+                        Name = reader["Name"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        Address = reader["Address"].ToString(),
+                        City = reader["City"].ToString(),
+                        Status = reader["Status"].ToString(),
+                        Stars = Convert.ToInt32(reader["Stars"]),
+                        CheckinTime = DateTime.Parse(reader["CheckinTime"].ToString()),
+                        CheckoutTime = DateTime.Parse(reader["CheckoutTime"].ToString()),
+
+                    });
+                
+                }
+                connection.Close();
+            }
+
+            return View(hotels);
+        }
+
+    }
+}
