@@ -4,120 +4,27 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 class="mb-4">Hotel Management System</h1>
-
-<p class="mb-3">
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
-</p>
-
-<table class="table styled-table mb-5">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.Name)</th>
-            <th>@Html.DisplayNameFor(model => model.Email)</th>
-            <th>@Html.DisplayNameFor(model => model.Phone)</th>
-            <th>@Html.DisplayNameFor(model => model.Address)</th>
-            <th>@Html.DisplayNameFor(model => model.City)</th>
-            <th>@Html.DisplayNameFor(model => model.Status)</th>
-            <th>@Html.DisplayNameFor(model => model.Stars)</th>
-            <th>@Html.DisplayNameFor(model => model.CheckinTime)</th>
-            <th>@Html.DisplayNameFor(model => model.CheckoutTime)</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                <td>@Html.DisplayFor(modelItem => item.Phone)</td>
-                <td>@Html.DisplayFor(modelItem => item.Address)</td>
-                <td>@Html.DisplayFor(modelItem => item.City)</td>
-                <td>@Html.DisplayFor(modelItem => item.Status)</td>
-                <td>@Html.DisplayFor(modelItem => item.Stars)</td>
-                <td>@Html.DisplayFor(modelItem => item.CheckinTime)</td>
-                <td>@Html.DisplayFor(modelItem => item.CheckoutTime)</td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        color: #333;
-        background-color: #f9f9f9;
+<h1 style="text-align:center; font-weight:bold" class="mb-4">Hotel Management System</h1>
+@*
+  <p class="mb-3">
+      <a asp-action="Create" class="btn btn-primary">Create New</a>
+  </p>
+  *@
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    @foreach (var item in Model)
+    {
+        <div class="hotel-card" style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box;">
+            <div>
+                <img src="/images/Hotel.png" alt="Hotel" style="width: 100%; height: auto;" />
+                <div>
+                    <b>@Html.DisplayFor(modelItem => item.Name)</b>
+                    <p>@Html.DisplayFor(modelItem => item.Status)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Stars)<i style="color: yellow" class="fa-solid fa-star"></i></p>
+                    <p>@Html.DisplayFor(modelItem => item.City)</p>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                </div>
+            </div>
+        </div>
     }
+</div>
 
-    h1 {
-        text-align: center;
-        color: #4CAF50;
-        margin-bottom: 20px;
-    }
-
-    .btn-primary {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        border: none;
-    }
-
-    .btn-primary:hover {
-        background-color: #45a049;
-        text-decoration: none;
-    }
-
-    .styled-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 25px 0;
-        font-size: 18px;
-        text-align: left;
-        background-color: #fff;
-    }
-
-    .styled-table thead tr {
-        background-color: #4CAF50;
-        color: white;
-        text-align: left;
-            margin-bottom: 30px; /* Space below the table */
-    }
-
-    .styled-table th, .styled-table td {
-        padding: 12px 15px;
-    }
-
-    .styled-table tbody tr {
-        border-bottom: 1px solid #dddddd;
-
-    }
-
-    .styled-table tbody tr:nth-of-type(even) {
-        background-color: #f3f3f3;
-    }
-
-    .styled-table tbody tr:last-of-type {
-        border-bottom: 2px solid #4CAF50;
-    }
-
-    .styled-table tbody tr:hover {
-        background-color: #f1f1f1;
-    }
-
-
-    p {
-        margin-bottom: 15px; /* Space below the paragraph */
-    }
-
-
-</style>

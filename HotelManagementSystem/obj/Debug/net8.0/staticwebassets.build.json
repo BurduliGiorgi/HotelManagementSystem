@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LmEiwegm+z+xvxIf14ojoVRVIs+p4/ni6P5abB5P21I=",
+  "Hash": "xZfRKjOKZGpdk8ntKgfCW/PTkU4Dke/lUeYz3WiAHXQ=",
   "Source": "HotelManagementSystem",
   "BasePath": "_content/HotelManagementSystem",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\Projects\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Hotel.png",
+      "SourceId": "HotelManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\Projects\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\",
+      "BasePath": "_content/HotelManagementSystem",
+      "RelativePath": "images/Hotel.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Hotel.png"
     },
     {
       "Identity": "C:\\Users\\PC\\Desktop\\Projects\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\js\\site.js",

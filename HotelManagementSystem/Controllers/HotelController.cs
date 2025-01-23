@@ -49,5 +49,36 @@ namespace HotelManagementSystem.Controllers
             return View(hotels);
         }
 
+
+
+        public ActionResult Details(int id)
+        {
+            Hotel hotel = new Hotel();
+            using (var connection = _connection)
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand($"SELECT * FROM HotelManagementDB.dbo.Hotels WHERE Id={id}", connection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    hotel.Id = Convert.ToInt32(reader["Id"]);
+                    hotel.Name = reader["Name"].ToString();
+                    hotel.Email = reader["Email"].ToString();
+                    hotel.Phone = reader["Phone"].ToString();
+                    hotel.Address = reader["Address"].ToString();
+                    hotel.City = reader["City"].ToString();
+                    hotel.Status = reader["Status"].ToString();
+                    hotel.Stars = Convert.ToInt32(reader["Stars"]);
+                    hotel.CheckinTime = DateTime.Parse(reader["CheckinTime"].ToString());
+                    hotel.CheckoutTime = DateTime.Parse(reader["CheckoutTime"].ToString());
+                }
+
+                connection.Close();
+
+
+            }
+            return View(hotel);
+        }
+
     }
 }

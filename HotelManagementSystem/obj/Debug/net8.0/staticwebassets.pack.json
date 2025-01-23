@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\PC\\Desktop\\Projects\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Hotel.png",
+      "PackagePath": "staticwebassets\\images\\Hotel.png"
+    },
+    {
       "Id": "C:\\Users\\PC\\Desktop\\Projects\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
