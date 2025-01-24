@@ -1,9 +1,6 @@
 ﻿using HotelManagementSystem.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using System.Net;
-
 namespace HotelManagementSystem.Controllers
 {
     public class HotelController : Controller
@@ -19,17 +16,17 @@ namespace HotelManagementSystem.Controllers
         }
         public IActionResult Index()
         {
-           List<Hotel> hotels = new List<Hotel>();
+            List<Hotel> hotels = new List<Hotel>();
             using (var connection = _connection)
             {
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM HotelManagementDB.dbo.Hotels", connection);
                 SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read()) 
+                while (reader.Read())
                 {
                     hotels.Add(new Hotel
                     {
-                        
+                        Id = Convert.ToInt32(reader["Id"]),
                         Name = reader["Name"].ToString(),
                         Email = reader["Email"].ToString(),
                         Phone = reader["Phone"].ToString(),
@@ -41,7 +38,7 @@ namespace HotelManagementSystem.Controllers
                         CheckoutTime = DateTime.Parse(reader["CheckoutTime"].ToString()),
 
                     });
-                
+
                 }
                 connection.Close();
             }
@@ -72,9 +69,13 @@ namespace HotelManagementSystem.Controllers
                     hotel.CheckinTime = DateTime.Parse(reader["CheckinTime"].ToString());
                     hotel.CheckoutTime = DateTime.Parse(reader["CheckoutTime"].ToString());
                 }
+
+                connection.Close();
             }
             return View(hotel);
         }
     }
 
     };
+
+

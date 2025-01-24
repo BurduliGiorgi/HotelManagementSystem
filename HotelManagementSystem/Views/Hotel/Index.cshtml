@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 style="text-align:center; font-weight:bold" class="mb-4">Hotel Management System</h1>
+<h1 style="color:white; text-align:center; font-weight:bold" class="mb-4">Hotel Management System</h1>
 @*
   <p class="mb-3">
       <a asp-action="Create" class="btn btn-primary">Create New</a>
@@ -13,18 +13,20 @@
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
     @foreach (var item in Model)
     {
-        <div class="hotel-card" style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box;">
+        <div class="hotel-card" style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; padding: 15px; border-radius: 15px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
             <div>
-                <img src="/images/Hotel.png" alt="Hotel" style="width: 100%; height: auto;" />
-                <div>
+                <img src="/images/Hotel.png" alt="Hotel" style="width: 100%; height: auto; border-radius: 10px;" />
+                <div style="margin-top: 10px; color: #333;">
                     <b>@Html.DisplayFor(modelItem => item.Name)</b>
                     <p>@Html.DisplayFor(modelItem => item.Status)</p>
-                    <p>@Html.DisplayFor(modelItem => item.Stars)<i style="color: yellow" class="fa-solid fa-star"></i></p>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Stars)
+                        <i style="color: yellow" class="fa-solid fa-star"></i>
+                    </p>
                     <p>@Html.DisplayFor(modelItem => item.City)</p>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "details-link", style = "text-decoration: none; color: white;" })
                 </div>
             </div>
         </div>
     }
 </div>
-
