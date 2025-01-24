@@ -72,13 +72,9 @@ namespace HotelManagementSystem.Controllers
                     hotel.CheckinTime = DateTime.Parse(reader["CheckinTime"].ToString());
                     hotel.CheckoutTime = DateTime.Parse(reader["CheckoutTime"].ToString());
                 }
-
-                connection.Close();
-
-
             }
             return View(hotel);
         }
-
     }
-}
+
+    };
