@@ -17,12 +17,20 @@
       "PackagePath": "staticwebassets\\images\\Hotel.png"
     },
     {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\NEUMORPHIC_CIRCLES_BACKGROUND.jpg",
+      "PackagePath": "staticwebassets\\images\\NEUMORPHIC_CIRCLES_BACKGROUND.jpg"
+    },
+    {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\bg.jpg",
       "PackagePath": "staticwebassets\\images\\bg.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\bg1.jpg",
       "PackagePath": "staticwebassets\\images\\bg1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\c0f4c20c-2b00-4acc-95c8-057b4b0d1b9e.jpg",
+      "PackagePath": "staticwebassets\\images\\c0f4c20c-2b00-4acc-95c8-057b4b0d1b9e.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\js\\site.js",

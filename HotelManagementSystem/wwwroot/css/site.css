@@ -17,12 +17,7 @@ html {
   min-height: 100%;
 }
 
-body {
-    margin-bottom: 60px;
-    background: rgb(35,35,36);
-    background: linear-gradient(90deg, rgba(35,35,36,1) 0%, rgba(17,17,17,1) 35%, rgba(35,35,36,1) 100%);
-    background-blend-mode: darken;
-}
+
 
 /* General styling for the hotel card */
 .hotel-card {
@@ -98,10 +93,7 @@ body {
     color: white;
 }
 
-.index-page-body {
-    background-image: url('/images/bg1.jpg');
-    background-size: cover;
-}
+
 
 .hotel-card {
     flex: 1 1 calc(33.33% - 20px);
