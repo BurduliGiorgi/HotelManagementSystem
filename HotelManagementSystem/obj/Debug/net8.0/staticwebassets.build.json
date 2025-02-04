@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wJ0zPKrWgG/L9xzIUy8nQowJ1r//stHVGf5b4gnRFWE=",
+  "Hash": "GWjmhKwMgHtrBRSVezGr/WfRoKwP87/NhqJskC6Bqls=",
   "Source": "HotelManagementSystem",
   "BasePath": "_content/HotelManagementSystem",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HotelManagementSystem.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\css\\rest.css",
+      "SourceId": "HotelManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\",
+      "BasePath": "_content/HotelManagementSystem",
+      "RelativePath": "css/rest.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\rest.css"
     },
     {
       "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\css\\site.css",
@@ -167,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Hotel.png"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotel2.png",
+      "SourceId": "HotelManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\",
+      "BasePath": "_content/HotelManagementSystem",
+      "RelativePath": "images/hotel2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hotel2.png"
     },
     {
       "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\NEUMORPHIC_CIRCLES_BACKGROUND.jpg",

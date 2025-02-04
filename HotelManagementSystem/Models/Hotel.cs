@@ -7,6 +7,10 @@ namespace HotelManagementSystem.Models
     {
         [Key]
         public int Id { get; set; }
+
+        [Required]
+        public string Image {  get; set; }
+
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }

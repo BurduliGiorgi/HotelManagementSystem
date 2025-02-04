@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\HotelManagementSystem.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\css\\rest.css",
+      "PackagePath": "staticwebassets\\css\\rest.css"
+    },
+    {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\c0f4c20c-2b00-4acc-95c8-057b4b0d1b9e.jpg",
       "PackagePath": "staticwebassets\\images\\c0f4c20c-2b00-4acc-95c8-057b4b0d1b9e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotel2.png",
+      "PackagePath": "staticwebassets\\images\\hotel2.png"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\js\\site.js",
