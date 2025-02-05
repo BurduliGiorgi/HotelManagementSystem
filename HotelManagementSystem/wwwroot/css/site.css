@@ -84,6 +84,7 @@ html, body {
     }
 
     .hotel-card p {
+        font-weight:bold;
         font-size: 1.2rem; /* Well-balanced text size */
         color: #555;
         margin: 6px 0;
