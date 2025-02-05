@@ -27,6 +27,7 @@ namespace HotelManagementSystem.Controllers
                     hotels.Add(new Hotel
                     {
                         Id = Convert.ToInt32(reader["Id"]),
+                        Logo_Url = reader["Logo_Url"].ToString(),
                         Name = reader["Name"].ToString(),
                         Email = reader["Email"].ToString(),
                         Phone = reader["Phone"].ToString(),
@@ -59,6 +60,7 @@ namespace HotelManagementSystem.Controllers
                 while (reader.Read())
                 {
                     hotel.Id = Convert.ToInt32(reader["Id"]);
+                    hotel.Logo_Url = reader["Logo_Url"].ToString();
                     hotel.Name = reader["Name"].ToString();
                     hotel.Email = reader["Email"].ToString();
                     hotel.Phone = reader["Phone"].ToString();

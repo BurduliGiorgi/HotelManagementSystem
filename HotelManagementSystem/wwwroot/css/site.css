@@ -7,68 +7,6 @@ html, body {
 
 
 
-
-
-/* General styling for the hotel card */
-.hotel-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 300px;
-    margin: 15px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left: 20px;
-}
-
-    /* Styling the inner content */
-    .hotel-card img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 15px;
-    }
-
-    .hotel-card div {
-        text-align: center;
-    }
-
-    /* Styling the text inside the card */
-    .hotel-card p {
-        margin: 5px 0;
-        font-size: 16px;
-        color: #333;
-    }
-
-    /* Styling the link */
-    .hotel-card a {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 15px;
-        font-size: 14px;
-        font-weight: bold;
-        color: #fff;
-        background-color: #007bff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-        .hotel-card a:hover {
-            background-color: #0056b3;
-        }
-
-    /* Hover effect for the card */
-    .hotel-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
 .nav-item a {
     color: white;
 }
@@ -83,34 +21,6 @@ html, body {
 }
 
 
-
-.hotel-card {
-    flex: 1 1 calc(33.33% - 20px);
-    box-sizing: border-box;
-    padding: 15px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-    .hotel-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .hotel-card img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-.details-link {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-}
 .c-item {
     width: 100vw; /* Ensure full width */
     height: 480px;
@@ -126,3 +36,76 @@ html, body {
 #hero-carousel {
     width: 100vw; /* Full viewport width */
 }
+
+
+.hotel-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Light background */
+    color: #333; /* Dark text for contrast */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Longer card */
+    min-height: 240px; /* Fixed height */
+    margin: 20px auto;
+}
+
+    .hotel-card > div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hotel-card img {
+        width: 220px; /* Bigger image */
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+        flex-shrink: 0;
+        margin-right: 30px; /* More space between text and image */
+    }
+
+    .hotel-card div > div {
+        flex: 1;
+        padding-right: 30px; /* More spacing for text */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Keeps text and button aligned */
+        min-height: 190px; /* Keeps layout consistent */
+    }
+
+    .hotel-card b {
+        font-size: 2rem; /* Bigger title */
+        font-weight: bold;
+        color: #222;
+    }
+
+    .hotel-card p {
+        font-size: 1.2rem; /* Well-balanced text size */
+        color: #555;
+        margin: 6px 0;
+    }
+
+    .hotel-card .stars {
+        font-size: 1.4rem; /* Bigger stars */
+        color: #ffcc00;
+    }
+
+.details-link {
+    align-self: flex-start;
+    padding: 12px 18px;
+    background-color: #222; /* Dark gray/black button */
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+    .details-link:hover {
+        background-color: #000; /* Full black hover effect */
+    }

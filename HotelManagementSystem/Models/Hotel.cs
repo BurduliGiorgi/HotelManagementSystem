@@ -9,7 +9,7 @@ namespace HotelManagementSystem.Models
         public int Id { get; set; }
 
         [Required]
-        public string Image {  get; set; }
+        public string Logo_Url {  get; set; }
 
         [Required]
         [MaxLength(50)]

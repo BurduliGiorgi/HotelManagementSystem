@@ -49,6 +49,130 @@
       "PackagePath": "staticwebassets\\images\\hotel2.png"
     },
     {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel1.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel10.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel11.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel12.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel13.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel14.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel2.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel3.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel4.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel5.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel6.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel7.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel8.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\hotels\\hotel9.jpg",
+      "PackagePath": "staticwebassets\\images\\hotels\\hotel9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room1.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room10.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room11.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room12.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room13.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room14.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room15.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room16.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room17.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room2.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room3.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room4.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room5.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room6.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room7.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room8.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room9.jpg",
+      "PackagePath": "staticwebassets\\images\\rooms\\room9.jpg"
+    },
+    {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
