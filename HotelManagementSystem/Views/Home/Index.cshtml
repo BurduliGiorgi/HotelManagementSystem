@@ -34,5 +34,20 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+       </div>
+    <div class="image-gallery">
+        <a asp-controller="City" asp-action="Index" asp-route-city="Chicago">
+            <img src="/images/Chicago Wallpaper.jpg" alt="Chicago Wallpaper" />
+            <div class="overlay">Chicago</div>
+        </a>
+        <a asp-controller="City" asp-action="Index" asp-route-city="Miami">
+            <img src="/images/Miami Wallpaper.jpg" alt="Miami Wallpaper" />
+            <div class="overlay">Miami</div>
+        </a>
+        <a asp-controller="City" asp-action="Index" asp-route-city="New York">
+            <img src="/images/New York Wallpaper.jpg" alt="New York Wallpaper" />
+            <div class="overlay">New York</div>
+        </a>
     </div>
 }
+

@@ -8,6 +8,7 @@ html, body {
 
 
 .nav-item a {
+    font-weight: bold;
     color: white;
 }
 
@@ -81,6 +82,7 @@ html, body {
         font-size: 2rem; /* Bigger title */
         font-weight: bold;
         color: #222;
+        font-family: sans-serif;
     }
 
     .hotel-card p {
@@ -108,5 +110,101 @@ html, body {
 }
 
     .details-link:hover {
-        background-color: #000; /* Full black hover effect */
+        background-color: #225 /* Full black hover effect */
     }
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Flexbox Container */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: #f4f4f4; /* Light background for contrast */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+    /* Image Link Styling */
+    .image-gallery a {
+        position: relative;
+        display: inline-block;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    /* Image Styling */
+    .image-gallery img {
+        width: 400px; /* BIGGER images */
+        height: 250px; /* Ensures consistent height */
+        object-fit: cover;
+        display: block;
+        border-radius: 16px;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    /* Text Overlay Styling */
+    .image-gallery a .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Hover Effects */
+    .image-gallery a:hover {
+        transform: scale(1.08);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+        .image-gallery a:hover img {
+            transform: scale(1.15);
+        }
+
+        /* Show Overlay on Hover */
+        .image-gallery a:hover .overlay {
+            opacity: 1;
+        }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .image-gallery {
+        gap: 20px;
+        padding: 30px;
+    }
+
+        .image-gallery img {
+            width: 350px;
+            height: 220px;
+        }
+}
+
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .image-gallery img {
+            width: 90%;
+            height: auto;
+        }
+}

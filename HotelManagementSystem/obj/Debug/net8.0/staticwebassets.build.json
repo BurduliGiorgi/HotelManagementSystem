@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "betuZG9rlXSX+ZWlm6AAxnT2Qmg6BEph+bxrlH6kPnQ=",
+  "Hash": "6wLlfq0OqM4wFmY2irmLcWjKjjW1wJtYHuYcq0yTJ34=",
   "Source": "HotelManagementSystem",
   "BasePath": "_content/HotelManagementSystem",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\c0f4c20c-2b00-4acc-95c8-057b4b0d1b9e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Chicago Wallpaper.jpg",
+      "SourceId": "HotelManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\",
+      "BasePath": "_content/HotelManagementSystem",
+      "RelativePath": "images/Chicago Wallpaper.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Chicago Wallpaper.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Hotel.png",
@@ -511,6 +530,25 @@
       "OriginalItemSpec": "wwwroot\\images\\hotels\\hotel9.jpg"
     },
     {
+      "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Miami Wallpaper.jpg",
+      "SourceId": "HotelManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\",
+      "BasePath": "_content/HotelManagementSystem",
+      "RelativePath": "images/Miami Wallpaper.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Miami Wallpaper.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\NEUMORPHIC_CIRCLES_BACKGROUND.jpg",
       "SourceId": "HotelManagementSystem",
       "SourceType": "Discovered",
@@ -528,6 +566,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\NEUMORPHIC_CIRCLES_BACKGROUND.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\New York Wallpaper.jpg",
+      "SourceId": "HotelManagementSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\",
+      "BasePath": "_content/HotelManagementSystem",
+      "RelativePath": "images/New York Wallpaper.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\New York Wallpaper.jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\rooms\\room1.jpg",

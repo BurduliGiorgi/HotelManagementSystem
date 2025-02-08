@@ -17,12 +17,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Chicago Wallpaper.jpg",
+      "PackagePath": "staticwebassets\\images\\Chicago Wallpaper.jpg"
+    },
+    {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Hotel.png",
       "PackagePath": "staticwebassets\\images\\Hotel.png"
     },
     {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\Miami Wallpaper.jpg",
+      "PackagePath": "staticwebassets\\images\\Miami Wallpaper.jpg"
+    },
+    {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\NEUMORPHIC_CIRCLES_BACKGROUND.jpg",
       "PackagePath": "staticwebassets\\images\\NEUMORPHIC_CIRCLES_BACKGROUND.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\New York Wallpaper.jpg",
+      "PackagePath": "staticwebassets\\images\\New York Wallpaper.jpg"
     },
     {
       "Id": "C:\\Users\\PC\\Desktop\\HotelManagementSystem\\HotelManagementSystem\\wwwroot\\images\\bg.jpg",

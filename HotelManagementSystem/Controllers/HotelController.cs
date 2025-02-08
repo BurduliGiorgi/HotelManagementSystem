@@ -1,6 +1,7 @@
 ﻿using HotelManagementSystem.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using System.Data;
 namespace HotelManagementSystem.Controllers
 {
     public class HotelController : Controller
@@ -76,7 +77,11 @@ namespace HotelManagementSystem.Controllers
             }
             return View(hotel);
         }
+        
+
     }
+    
+
 
     };
 

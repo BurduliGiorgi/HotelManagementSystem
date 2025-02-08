@@ -1,0 +1,32 @@
+﻿@model IEnumerable<HotelManagementSystem.Models.Hotel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:white; text-align:center; font-weight:bold" class="mb-4">Hotel Management System</h1>
+@*
+  <p class="mb-3">
+      <a asp-action="Create" class="btn btn-primary">Create New</a>
+  </p>
+  *@
+<div>
+    @foreach (var item in Model)
+    {
+        <div class="hotel-card">
+            <div>
+                <img src="@Html.DisplayFor(modelItem => item.Logo_Url)" alt="modelItem => item.Name" />
+                <div>
+                    <b>@Html.DisplayFor(modelItem => item.Name)</b>
+                    <p style="color: @(item.Status == "Active" ? "green" : "red");">@Html.DisplayFor(modelItem => item.Status)</p>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Stars)
+                        <i style="color: orange;" class="fa-solid fa-star"></i>
+                    </p>
+                    <p><i class="fa-solid fa-city"></i> @Html.DisplayFor(modelItem => item.City)</p>
+                    @Html.ActionLink("Details", "Details", "Hotel", new { id = item.Id }, new { @class = "details-link", style = "text-decoration: none; color: white;" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
