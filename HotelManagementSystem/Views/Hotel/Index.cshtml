@@ -15,18 +15,18 @@
     {
         <div class="hotel-card" >
             <div>
-                <img src="@Html.DisplayFor(modelItem => item.Logo_Url)" alt="modelItem => item.Name"  />
+                <img style="font-weight:bold" src="@Html.DisplayFor(modelItem => item.Logo_Url)" alt="modelItem => item.Name" />
                 <div >
-                    <b >@Html.DisplayFor(modelItem => item.Name)</b>
-                    <p style="color: @(item.Status == "Active" ? "green" : "red");">@Html.DisplayFor(modelItem => item.Status)</p>
+                    <b style="font-weight:bold">@Html.DisplayFor(modelItem => item.Name)</b>
+                    <p style="color: @(item.Status == "Open" ? "#00853E" : "red");font-weight:bold">@Html.DisplayFor(modelItem => item.Status)</p>
                     <p>
                         @Html.DisplayFor(modelItem => item.Stars)
-                        <i style="color: orange;" class="fa-solid fa-star"></i>
+                        <i style="color: orange;font-weight:bold" class="fa-solid fa-star"></i>
                     </p>
-                    <p><i class="fa-solid fa-city"></i> @Html.DisplayFor(modelItem => item.City)</p>
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "details-link", style = "text-decoration: none; color: white;" })
+                    <p style="font-weight:bold"><i style="font-weight:bold" class="fa-solid fa-city"></i> @Html.DisplayFor(modelItem => item.City)</p>
+                  @Html.ActionLink("Details", "Details", "Hotel", new { id = item.Id }, new { @class = "details-link", style = "text-decoration: none; color: white;" }) 
                 </div>
-            </div>
+            </div> 
         </div>
     }
 </div>

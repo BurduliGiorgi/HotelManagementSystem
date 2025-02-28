@@ -27,7 +27,7 @@
 
                 <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.Status)</dt>
                 <dd class="col-sm-8">
-                    <span class="badge @(Model.Status == "Open" ? "badge-success" : "badge-danger") px-3 py-2">
+                <span class="badge @(Model.Status == "Open" ? "badge-success" : "badge-danger") px-3 py-2">
                         @Html.DisplayFor(model => model.Status)
                     </span>
                 </dd>
@@ -53,6 +53,36 @@
             </a>
         </div>
     </div>
+    <br /><br /><br />
+<div style="width:50%">
+    <h1>Staffs</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                FirstName
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>DateOfBirth</th>
+            <th>Phone</th>
+            <th>HireDate</th>
+        </tr>
+        @foreach (var staff in Model.Staffs)
+        {
+            <tr>
+                <td>@staff.FirstName</td>
+                <td>@staff.LastName</td>
+                <td>@staff.Email</td>
+                <td>@staff.Salary.ToString("F2")</td>
+                <td>@staff.DateOfBirth.ToShortDateString()</td>
+                <td>@staff.Phone</td>
+                <td>@staff.HireDate.ToShortDateString()</td>
+            </tr>
+        }
+    </table>
 </div>
 
 @section Scripts {

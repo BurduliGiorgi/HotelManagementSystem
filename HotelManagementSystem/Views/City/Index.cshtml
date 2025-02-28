@@ -18,7 +18,7 @@
                 <img src="@Html.DisplayFor(modelItem => item.Logo_Url)" alt="modelItem => item.Name" />
                 <div>
                     <b>@Html.DisplayFor(modelItem => item.Name)</b>
-                    <p style="color: @(item.Status == "Active" ? "green" : "red");">@Html.DisplayFor(modelItem => item.Status)</p>
+                    <p style="color: @(item.Status == "Open" ? "green" : "red");">@Html.DisplayFor(modelItem => item.Status)</p>
                     <p>
                         @Html.DisplayFor(modelItem => item.Stars)
                         <i style="color: orange;" class="fa-solid fa-star"></i>
