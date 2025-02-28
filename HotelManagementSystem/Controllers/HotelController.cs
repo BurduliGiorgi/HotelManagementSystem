@@ -63,7 +63,6 @@ namespace HotelManagementSystem.Controllers
             List<Staff> staffs = new List<Staff>();
             try
             {
-                Console.WriteLine($"Fetching staff for Hotel ID: {hotelId}"); // Debugging Line
 
                 using (SqlConnection connection = new SqlConnection(_connectionString))
                 {
@@ -75,7 +74,7 @@ namespace HotelManagementSystem.Controllers
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (!reader.HasRows)
                     {
-                        Console.WriteLine($"No staff found for Hotel ID: {hotelId}"); // Debugging Line
+
                     }
 
                     while (reader.Read())
@@ -95,12 +94,11 @@ namespace HotelManagementSystem.Controllers
                     }
                 }
 
-                Console.WriteLine($"Total staff found: {staffs.Count}"); // Debugging Line
                 return staffs;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error fetching staff: {ex.Message}"); // Debugging Line
+
                 throw;
             }
         }

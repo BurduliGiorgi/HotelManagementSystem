@@ -4,85 +4,83 @@
     ViewData["Title"] = "Hotel Details";
 }
 
-<div class="container mt-5" style="font-weight: bold">
-        <div class="card-body p-4">
-            <div class="text-center mb-4">
-                <img src="@Html.DisplayFor(model => model.Logo_Url)" alt="@Html.DisplayFor(model => model.Name)" class="img-fluid rounded shadow-sm" style="max-width: 300px; " />
-            </div>
-            <dl class="row">
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.Name)</dt>
-                <dd class="col-sm-8">@Html.DisplayFor(model => model.Name)</dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.Email)</dt>
-                <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.Phone)</dt>
-                <dd class="col-sm-8">@Html.DisplayFor(model => model.Phone)</dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.Address)</dt>
-                <dd class="col-sm-8">@Html.DisplayFor(model => model.Address)</dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.City)</dt>
-                <dd class="col-sm-8">@Html.DisplayFor(model => model.City)</dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.Status)</dt>
-                <dd class="col-sm-8">
-                <span class="badge @(Model.Status == "Open" ? "badge-success" : "badge-danger") px-3 py-2">
-                        @Html.DisplayFor(model => model.Status)
-                    </span>
-                </dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.Stars)</dt>
-                <dd class="col-sm-8">
-                    @for (int i = 0; i < Model.Stars; i++)
-                    {
-                        <i class="fas fa-star text-warning"></i>
-                    }
-                </dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.CheckinTime)</dt>
-                <dd class="col-sm-8">@Html.DisplayFor(model => model.CheckinTime)</dd>
-
-                <dt class="col-sm-4 text-dark font-weight-bold">@Html.DisplayNameFor(model => model.CheckoutTime)</dt>
-                <dd class="col-sm-8">@Html.DisplayFor(model => model.CheckoutTime)</dd>
-            </dl>
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-lg overflow-hidden">
+        <div class="card-header bg-dark text-white text-center py-4">
+            <h2 style="font-weight:bold" class="mb-0">@Model.Name</h2>
         </div>
-        <div class="card-footer d-flex justify-content-between bg-light">
-            <a asp-action="Index" class="btn btn-secondary">
-                <i class="fas fa-arrow-left"></i> Back to List
+        <div class="card-body p-5">
+            <div class="text-center mb-4">
+                <img src="@Html.DisplayFor(model => model.Logo_Url)" alt="@Model.Name" class="img-fluid rounded-circle shadow-lg" style="max-width: 200px; border: 5px solid #fff;" />
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li style="font-weight:bold" class="list-group-item"><strong>Email:</strong>   @Model.Email</li>
+                        <li style="font-weight:bold" class="list-group-item"><strong>Phone:</strong>  @Model.Phone</li>
+                        <li style="font-weight:bold" class="list-group-item"><strong>Address:</strong> @Model.Address, @Model.City</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Status:</strong>
+                            <span style="font-weight:bold" class="badge px-3 py-2" style="color: white; background-color: @(Model.Status == "Open" ? "#28a745" : "#dc3545")">
+                                @Model.Status
+                            </span>
+                        </li>
+                        <li style="font-weight:bold" class="list-group-item">
+                            <strong>Stars:</strong>
+                            @for (int i = 0; i < Model.Stars; i++)
+                            {
+                                <i class="fas fa-star text-warning"></i>
+                            }
+                        </li>
+                        <li style="font-weight:bold" class="list-group-item"><strong>Check-in:</strong> @Model.CheckinTime</li>
+                        <li style="font-weight:bold" class="list-group-item"><strong>Check-out:</strong> @Model.CheckoutTime</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer bg-dark d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-outline-light">
+                <i style="font-weight:bold"class="fas fa-arrow-left"></i> Back to List
             </a>
         </div>
     </div>
-    <br /><br /><br />
-<div style="width:50%">
-    <h1>Staffs</h1>
-    <table class="table table-striped">
-        <tr>
-            <th>
-                FirstName
-            </th>
-            <th>
-                LastName
-            </th>
-            <th>Email</th>
-            <th>Salary</th>
-            <th>DateOfBirth</th>
-            <th>Phone</th>
-            <th>HireDate</th>
-        </tr>
-        @foreach (var staff in Model.Staffs)
-        {
-            <tr>
-                <td>@staff.FirstName</td>
-                <td>@staff.LastName</td>
-                <td>@staff.Email</td>
-                <td>@staff.Salary.ToString("F2")</td>
-                <td>@staff.DateOfBirth.ToShortDateString()</td>
-                <td>@staff.Phone</td>
-                <td>@staff.HireDate.ToShortDateString()</td>
-            </tr>
-        }
-    </table>
+</div>
+
+<div class="container mt-5">
+    <h3 class="text-center mb-4 text-dark">Hotel Staff</h3>
+    <div class="table-responsive">
+        <table class="table table-dark table-hover text-center rounded">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Salary</th>
+                    <th>Date of Birth</th>
+                    <th>Phone</th>
+                    <th>Hire Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var staff in Model.Staffs)
+                {
+                    <tr>
+                        <td>@staff.FirstName</td>
+                        <td>@staff.LastName</td>
+                        <td>@staff.Email</td>
+                        <td>@staff.Salary.ToString("C")</td>
+                        <td>@staff.DateOfBirth.ToShortDateString()</td>
+                        <td>@staff.Phone</td>
+                        <td>@staff.HireDate.ToShortDateString()</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
 
 @section Scripts {
