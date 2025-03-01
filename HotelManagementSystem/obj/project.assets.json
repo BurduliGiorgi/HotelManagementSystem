@@ -6727,11 +6727,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\burdu\\Desktop\\New folder (2)\\HotelManagementSystem\\HotelManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\burdu\\Desktop\\New folder (3)\\HotelManagementSystem\\HotelManagementSystem.csproj",
       "projectName": "HotelManagementSystem",
-      "projectPath": "C:\\Users\\burdu\\Desktop\\New folder (2)\\HotelManagementSystem\\HotelManagementSystem.csproj",
+      "projectPath": "C:\\Users\\burdu\\Desktop\\New folder (3)\\HotelManagementSystem\\HotelManagementSystem.csproj",
       "packagesPath": "C:\\Users\\burdu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\burdu\\Desktop\\New folder (2)\\HotelManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\burdu\\Desktop\\New folder (3)\\HotelManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

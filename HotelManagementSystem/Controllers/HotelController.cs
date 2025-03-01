@@ -103,6 +103,40 @@ namespace HotelManagementSystem.Controllers
             }
         }
 
+        private List<Room> GetRooms (int hotelId)
+        {
+            List<Room> rooms = new List<Room>();
+            try
+            {
+                using (SqlConnection connection =new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand($"[GetRoomsByHotelId]", connection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@HotelId", SqlDbType.Int)).Value = hotelId;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+
+                        rooms.Add(new Room
+                        {
+                            RoomNumber = Convert.ToInt32(reader["RoomNumber"]),
+                            Status = reader["Status"].ToString(),
+
+                        });
+
+                    }
+
+                }
+                return rooms;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
         private Hotel GetHotel(int hotelId)
         {
             Hotel hotel = new Hotel();
@@ -130,6 +164,7 @@ namespace HotelManagementSystem.Controllers
                 connection.Close();
             }
             hotel.Staffs = GetStaffs(hotelId);
+            hotel.Rooms = GetRooms(hotelId);
             return hotel;
         }
     }

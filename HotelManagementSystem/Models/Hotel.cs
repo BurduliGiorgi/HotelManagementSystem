@@ -37,5 +37,6 @@ namespace HotelManagementSystem.Models
         public DateTime CheckoutTime{ get; set; }
 
         public List<Staff> Staffs { get; set; } = [];
+        public List<Room> Rooms { get; set; } = [];
     }
 }
