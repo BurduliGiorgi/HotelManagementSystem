@@ -97,10 +97,13 @@
                 
                     @foreach (var room in Model.Rooms)
                     {
-                    <tr>
+
+
+                    <tr onclick="location.href='@Url.Action("Details", "Room", new { roomnumber = room.RoomNumber })'">                   
                         <td>@room.RoomNumber</td>
                         <td>@room.Status</td>
                     </tr>
+                    
                     }
 
                 
