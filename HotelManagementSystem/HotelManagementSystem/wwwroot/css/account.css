@@ -1,0 +1,82 @@
+﻿.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 2rem;
+}
+
+.account-box {
+    background: white;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.account-header {
+    margin-bottom: 2rem;
+}
+
+    .account-header h2 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+    }
+
+    .account-header p {
+        font-size: 0.9rem;
+    }
+
+.account-form .form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+    .account-form .form-control:focus {
+        border-color: #86b7fe;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #0b5ed7;
+        transform: translateY(-1px);
+    }
+
+.btn-outline-secondary {
+    transition: all 0.3s;
+}
+
+    .btn-outline-secondary:hover {
+        transform: translateY(-1px);
+    }
+
+.text-danger {
+    font-size: 0.8rem;
+}
+
+/* Add some animation */
+.account-box {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
