@@ -9,6 +9,12 @@ namespace HotelManagementSystem.Data
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
+        public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
 
-    }
+    };
 }
