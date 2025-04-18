@@ -27,8 +27,8 @@ namespace HotelManagementSystem.Models
         [Display(Name = "IsActive")]
         public bool IsActive { get; set; } = true;
         [Display(Name = "ImageUrl")]
-        public string ImageUrl { get; set; }
-        [Display(Name = "HotelId")]
+        public string ImageUrl { get; set; } = "";
+        [Display(Name = "HotelId")] 
 
         public int HotelId { get; set; }
         public Hotel Hotel { get; set; }

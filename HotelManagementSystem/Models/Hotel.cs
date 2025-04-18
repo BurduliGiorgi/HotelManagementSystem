@@ -18,7 +18,7 @@ namespace HotelManagementSystem.Models
         [Display(Name = "ContactNumber")]
         public string ContactNumber { get; set; }
         [Display(Name = "ImageUrl")]
-        public string ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = "";
 
         public ICollection<Room> Rooms { get; set; }
         public ICollection<Staff> StaffMembers { get; set; }

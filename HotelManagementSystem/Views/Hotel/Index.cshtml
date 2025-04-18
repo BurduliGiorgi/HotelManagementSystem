@@ -27,9 +27,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.ContactNumber)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
+            @* <th> *@
+            @*     @Html.DisplayNameFor(model => model.ImageUrl) *@
+            @* </th> *@
             <th></th>
         </tr>
     </thead>
@@ -51,9 +51,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ContactNumber)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
-            </td>
+            @* <td> *@
+            @*         <img src="@Html.DisplayFor(modelItem => item.ImageUrl)" alt="@Html.DisplayFor(modelItem => item.Name)" /> *@
+                
+            @* </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

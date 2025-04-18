@@ -40,14 +40,85 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ContactNumber)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImageUrl)
-        </dd>
+        @* <dt class = "col-sm-2"> *@
+        @*     @Html.DisplayNameFor(model => model.ImageUrl) *@
+        @* </dt> *@
+        @* <dd class = "col-sm-10"> *@
+        @*     @Html.DisplayFor(model => model.ImageUrl) *@
+        @* </dd> *@
     </dl>
 </div>
+<a asp-controller="Staffs" asp-action="Create">Add Staff</a>
+@if (Model.StaffMembers != null && Model.StaffMembers.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>FullName</th>
+                <th>Role</th>
+                <th>Shift</th>
+                <th>Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var staff in Model.StaffMembers)
+            {
+                <tr>
+                    <td>@staff.FullName</td>
+                    <td>@staff.Role</td>
+                    <td>@staff.Shift</td>
+                    <td>@staff.Salary</td>
+                    <td>
+                        <a asp-controller="Staffs" asp-action="Details" asp-route-id="@staff.Id" class="btn btn-info btn-sm">View</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No staff members found for this hotel.</p>
+}
+
+<a asp-controller="Rooms" asp-action="Create">Add Room</a>
+@if (Model.Rooms != null && Model.Rooms.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>RoomNumber</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Features</th>
+                <th>IsActive</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var room  in Model.Rooms)
+            {
+                <tr>
+                    <td>@room.RoomNumber</td>
+                    <td>@room.Type</td>
+                    <td>@room.Status</td>
+                    <td>@room.Features</td>
+                    <td>@room.IsActive</td>
+                    <td>
+                        <a asp-controller="Staffs" asp-action="Details" asp-route-id="@room.Id" class="btn btn-info btn-sm">View</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No Rooms found for this hotel.</p>
+}
+
+
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
