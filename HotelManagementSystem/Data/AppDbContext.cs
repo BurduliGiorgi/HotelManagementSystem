@@ -16,5 +16,25 @@ namespace HotelManagementSystem.Data
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Staff> Staffs { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Payment>()
+                .HasOne(p => p.Hotel)
+                .WithMany()
+                .HasForeignKey(p => p.HotelId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Payment>()
+                .HasOne(p => p.Booking)
+                .WithMany()
+                .HasForeignKey(p => p.BookingId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+
     };
+
+
 }
+
