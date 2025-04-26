@@ -7,22 +7,26 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HotelManagementSystem.Data;
 using HotelManagementSystem.Models;
+using HotelManagementSystem.IRepositories;
 
 namespace HotelManagementSystem.Controllers
 {
     public class HotelController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IPaymentRepository _hotelRepository;
 
-        public HotelController(AppDbContext context)
+        public HotelController(AppDbContext context, IPaymentRepository hotelIRepository)
         {
             _context = context;
+            _hotelRepository = hotelIRepository;
         }
 
         // GET: Hotels
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Hotels.ToListAsync());
+            var hotels = await _hotelRepository.GetAllPaymentsAsync();
+            return View(hotels);
         }
 
         // GET: Hotels/Details/5
@@ -56,15 +60,10 @@ namespace HotelManagementSystem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Address,City,Country,ContactNumber,ImageUrl")] Hotel hotel)
+        public async Task<IActionResult> Create(Hotel hotel)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(hotel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(hotel);
+            await _hotelRepository.AddPaymentAsync(hotel);
+            return RedirectToAction("Index");
         }
 
         // GET: Hotels/Edit/5
@@ -88,52 +87,17 @@ namespace HotelManagementSystem.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Address,City,Country,ContactNumber,ImageUrl")] Hotel hotel)
+        public async Task<IActionResult> Edit(Hotel hotel)
         {
-            if (id != hotel.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(hotel);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!HotelExists(hotel.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(hotel);
+            await _hotelRepository.UpdatePaymentAsync(hotel);
+            return RedirectToAction("Index");
         }
 
         // GET: Hotels/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var hotel = await _context.Hotels
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (hotel == null)
-            {
-                return NotFound();
-            }
-
-            return View(hotel);
+            await _hotelRepository.DeletePaymentAsync(id);
+            return RedirectToAction("Index");
         }
 
         // POST: Hotels/Delete/5
@@ -149,11 +113,6 @@ namespace HotelManagementSystem.Controllers
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool HotelExists(int id)
-        {
-            return _context.Hotels.Any(e => e.Id == id);
         }
     }
 }
