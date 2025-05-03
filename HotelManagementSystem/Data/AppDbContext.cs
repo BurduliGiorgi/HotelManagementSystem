@@ -16,6 +16,9 @@ namespace HotelManagementSystem.Data
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Staff> Staffs { get; set; }
 
+        public DbSet<RoomType> RoomTypes { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

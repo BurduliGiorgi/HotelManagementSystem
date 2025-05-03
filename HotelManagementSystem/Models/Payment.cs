@@ -23,6 +23,8 @@ namespace HotelManagementSystem.Models
         public int HotelId { get; set; }
         [Display(Name = "Hotel")]
         public Hotel Hotel { get; set; }
+        public string UserId { get; set; }
+        public Users User { get; set; }
 
 
 
