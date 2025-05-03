@@ -14,9 +14,9 @@ namespace HotelManagementSystem.Controllers
     public class HotelController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly IPaymentRepository _hotelRepository;
+        private readonly IHotelRepository _hotelRepository;
 
-        public HotelController(AppDbContext context, IPaymentRepository hotelIRepository)
+        public HotelController(AppDbContext context, IHotelRepository hotelIRepository)
         {
             _context = context;
             _hotelRepository = hotelIRepository;
@@ -25,7 +25,7 @@ namespace HotelManagementSystem.Controllers
         // GET: Hotels
         public async Task<IActionResult> Index()
         {
-            var hotels = await _hotelRepository.GetAllPaymentsAsync();
+            var hotels = await _hotelRepository.GetAllHotelsAsync();
             return View(hotels);
         }
 
@@ -62,7 +62,7 @@ namespace HotelManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Hotel hotel)
         {
-            await _hotelRepository.AddPaymentAsync(hotel);
+            await _hotelRepository.AddHotelAsync(hotel);
             return RedirectToAction("Index");
         }
 
@@ -89,14 +89,14 @@ namespace HotelManagementSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Hotel hotel)
         {
-            await _hotelRepository.UpdatePaymentAsync(hotel);
+            await _hotelRepository.UpdateHotelAsync(hotel);
             return RedirectToAction("Index");
         }
 
         // GET: Hotels/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
-            await _hotelRepository.DeletePaymentAsync(id);
+            await _hotelRepository.DeleteHotelAsync(id);
             return RedirectToAction("Index");
         }
 
